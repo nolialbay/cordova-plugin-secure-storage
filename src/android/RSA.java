@@ -61,7 +61,7 @@ public class RSA {
 						.setDigests(KeyProperties.DIGEST_SHA256, KeyProperties.DIGEST_SHA512)
 						.setEncryptionPaddings(KeyProperties.ENCRYPTION_PADDING_RSA_PKCS1)
 						.setRandomizedEncryptionRequired(true)
-					    .setInvalidatedByBiometricEnrollment(false);
+					    .setInvalidatedByBiometricEnrollment(true);
 				KeyGenParameterSpec spec = builder.build();
 				generator.initialize(spec);
 				generator.generateKeyPair();
